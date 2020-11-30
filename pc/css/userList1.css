@@ -1,0 +1,131 @@
+.top {
+    width: 1320px;
+    margin: 1rem auto 0.4rem auto;
+    display: flex;
+    align-items: center;
+}
+.dropbtn {
+    width: 60px;
+    height: 30px;
+    background-color: #5f5f5f;
+    border-right: 1px solid white;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown a {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 4px;
+    font-size: 0.6rem;
+    margin-left: 0.4rem;
+}
+
+.container {
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border: 1px solid #bfbfbf;
+    border-top: 2px solid #db442a;
+}
+.innerBox {
+    border: 1px solid #dfdfdf;
+    padding-top: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.4rem;
+}
+.innerBox .title {
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+    border: 1px dotted #db442a;
+    padding: 0.4rem 1.4rem;
+}
+.innerBox .header {
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+}
+.innerBox font {
+    width: 100%;
+}
+.attri {
+    background-color: #dfdfdf;
+}
+.sum_line .val1 {
+    background-color: #efefef;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+}
+.sum_line .val2 {
+    background-color: #efefef;
+    color: #000;
+    font-weight: 600;
+    text-align: right;
+}
+.salesdate {
+    color: #2f99bd;
+}
+.salesman {
+    color: #191cd1;
+    font-weight: 600;
+}
+.salesTR:hover {
+    background-color: #e6eeff!important;
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+    box-shadow: 0px 0px 20px #ffd7d7;
+    z-index: 2;
+   -webkit-transition: all 200ms ease-in;
+   -webkit-transform: scale(1.01);
+   -ms-transition: all 200ms ease-in;
+   -ms-transform: scale(1.01);   
+   -moz-transition: all 200ms ease-in;
+   -moz-transform: scale(1.01);
+   transition: all 200ms ease-in;
+   transform: scale(1.01);
+}
