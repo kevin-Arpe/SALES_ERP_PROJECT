@@ -1,5 +1,29 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SCM_NoticeListControl.ascx.cs" Inherits="Admin_SCM_NoticeListControl" %>
 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+<style>
+.attri {
+    background-color: #dfdfdf;
+}
+.sum_line .val1 {
+    background-color: #efefef;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+}
+.sum_line .val2 {
+    background-color: #efefef;
+    color: #000;
+    font-weight: 600;
+    text-align: right;
+}
+.salesdate {
+    color: #2f99bd;
+}
+.salesman {
+    color: #191cd1;
+    font-weight: 600;
+}
+</style>
 
 
                       <table width=98%  border="0" cellpadding="0" cellspacing="0"> 
@@ -26,8 +50,10 @@
                              </asp:TemplateField> 
 
                              <asp:TemplateField HeaderText ="담당자명">
-                                <ItemTemplate>                                     
-                                    <b><%#FuncCutStrng(Eval("salesman1"))%></b>	                                 
+                                <ItemTemplate>
+                                    <div class="salesman">
+                                        <%#FuncCutStrng(Eval("salesman1"))%>	 
+                                    </div>                                                                    
                                 </ItemTemplate>
                                 <ItemStyle Width ="9%" HorizontalAlign ="left" ForeColor="blue"/>
                              </asp:TemplateField> 
@@ -53,8 +79,10 @@
                                         				
 									
 							 <asp:TemplateField HeaderText ="수량">
-                                <ItemTemplate>                                     
-                                    <%#FuncCutStrng(Eval("ea1"))%>                                
+                                <ItemTemplate>
+                                    <div class="ea">
+                                        <%#FuncCutStrng(Eval("ea1"))%>    
+                                    </div>                                                             
                                 </ItemTemplate>
                                 <ItemStyle Width ="5%" HorizontalAlign ="right" />
                              </asp:TemplateField>
@@ -62,8 +90,10 @@
 	 
 							 
                          <asp:TemplateField HeaderText ="단가">
-                                <ItemTemplate>                                     
-                                    <%#FuncCutStrng(Eval("price1"))%>	                                 
+                                <ItemTemplate>
+                                    <div class="price">
+                                        <%#FuncCutStrng(Eval("price1"))%>	
+                                    </div>                                 
                                 </ItemTemplate>
                                 <ItemStyle Width ="10%" HorizontalAlign ="right" />
                              </asp:TemplateField>
@@ -71,8 +101,10 @@
 
                            	   
 						<asp:TemplateField HeaderText ="공급가액">
-                                <ItemTemplate>                                     
-                                    <%#FuncCutStrng(Eval("supply1"))%>	                                 
+                                <ItemTemplate>   
+                                    <div class="supply">
+                                        <%#FuncCutStrng(Eval("supply1"))%>	
+                                    </div>                                 
                                 </ItemTemplate>
                                 <ItemStyle Width ="10%" HorizontalAlign ="right" />
                              </asp:TemplateField>  
@@ -80,15 +112,19 @@
                          		 
 						<asp:TemplateField HeaderText="부가세">
                                             <ItemTemplate> 
-                                            <%#FuncCutStrng(Eval("vat1"))%>									   
+                                                <div class="vat">
+                                                    <%#FuncCutStrng(Eval("vat1"))%>	
+                                                </div>								   
                                             </ItemTemplate>
                                             <ItemStyle Width="10%" HorizontalAlign="right" />
                                         </asp:TemplateField>    
 
 
                           <asp:TemplateField HeaderText ="합계">
-                                <ItemTemplate>                                     
-                                    <%#FuncCutStrng(Eval("total1"))%>	                                 
+                                <ItemTemplate>
+                                    <div class="total">
+                                        <%#FuncCutStrng(Eval("total1"))%>	       
+                                    </div>                                                          
                                 </ItemTemplate>
                                 <ItemStyle Width ="10%" HorizontalAlign ="right" />
                              </asp:TemplateField>
@@ -174,4 +210,6 @@
  
        
  </td></tr></table> 
- </td></tr></table> 
+ </td></tr></table>
+
+ <script src="func1.js"></script> 
